@@ -1,0 +1,55 @@
+<app-dashboard></app-dashboard>
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard Insights</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item">Statistics</li>
+          <!-- <li class="breadcrumb-item active">Data</li> -->
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Details</h5>
+             
+
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    
+                    <th scope="col">Type</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Detail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let st of statistics">
+                    
+                    <td>{{ st.type }}</td>
+                    <td>{{ st.title }}</td>
+                    <td>{{ st.status }}</td>
+                    <td>{{ st.Detail }}</td>
+                  </tr>
+             
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
